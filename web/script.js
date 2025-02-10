@@ -15,7 +15,9 @@ async function getVerse() {
         return
     }
 
-    const apiUrl = getBibleVerseUrl(livre, chapitre, verset)
+    const translation = document.getElementById("translation").value;
+
+    const apiUrl = getBibleVerseUrl(livre, chapitre, verset, translation)
 
     try {
         const response = await fetch(apiUrl);
@@ -23,6 +25,7 @@ async function getVerse() {
 
         if (data.text) {
             document.getElementById("verse-result").innerHTML = '<p>Verset: '+ data.text + '</p>';
+            return data.text
         } else {
             document.getElementById("verse-result").innerHTML = "<p>Attention: Que ton cœur ne se trouble point, ô chercheur ! Car l'absence de résultat n'est point une fin, mais un nouveau commencement sur le chemin de la découvert</p>";
         }
@@ -31,8 +34,8 @@ async function getVerse() {
     }
 }
 
-function getBibleVerseUrl(livre, chapitre, verset) {
-    return "https://bible-api.com/" + livre + chapitre + ":" + verset
+function getBibleVerseUrl(livre, chapitre, verset, translation) {
+    return "https://bible-api.com/" + livre + chapitre + ":" + verset + "?translation=" + translation
 }
 
 module.exports = {
