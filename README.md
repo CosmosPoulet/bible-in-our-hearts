@@ -9,11 +9,21 @@ Il faut définir le livre, le chapitre, et un verset (optionnel, sinon l'ensembl
 get-specific-verse
 Il s'agit d'implémenter l'utilisation de base de l'api en la rendant plus acessible aux utilisateurs avec un site web simple.
 On annonce trois entrées pour les variables précedentes.
+Pour plus de simplicité utilisateur et la réduction d'erreurs, une liste fermée est mise en place pour le choix des livres.
+
+La fonction "getVerse" est la fonction principale pour mettre en forme les entrées de l'utilisateur pour réaliser la requete, et donner le resultat (ou annoncer une erreur le cas écheant)
+
+La fonction "getBibleVerseUrl" est utilisée pour la vérification des requetes aupres de l'API, deja pre-construite avec une securité en cas d'erreur dans la formation de la requete.
 
 # Fonctionnalité 2
 get-translation
 Il s'agit d'implémenter une nouvelle entrée, permettant de choisir si on veut traduire le verset dans une liste de langue proposée.
-Par defaut, le rendu est réalisé en anglais.
+Si aucune langue n'est demandée, le rendu est réalisé à travers la world english bible par defaut.
+Pour plus de simplicité utilisateur et la réduction d'erreurs, une liste fermée est mise en place pour le choix des langues de traduction.
+Il n'y a pas de test avancés suite à la gestion sécurisée (et encadré) de cette nouvelle entrée, on a simplement réalisé une complété du test existant.
+
+La fonction principale "get-specific-verse" a été complétée avec cette nouvelle entrée pour la formater à la suite de la requete pour l'API.
+
 
 # Fonctionnalité 3
 get-random-verse
