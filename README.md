@@ -29,3 +29,6 @@ La fonction principale "get-specific-verse" a été complétée avec cette nouve
 get-random-verse
 Il s'agit d'implementer un bouton permettant de réaliser une requete rendant un verset aléatoire en donnant des arguments aléatoire valide.
 L'api possède déjà une gestion pour éviter de réaliser une erreur de requete vers des versets inexistants
+
+L'ajout de la fonction "getRandomVerse" permet d'obtenir un verset aléatoire de n'importe quel livre à travers une nouvelle forme de requete deja existante avec l'API
+Le test implémenté verifie simplement la fonction d'appel de l'api.
