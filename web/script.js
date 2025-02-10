@@ -25,12 +25,26 @@ async function getVerse() {
 
         if (data.text) {
             document.getElementById("verse-result").innerHTML = '<p>Verset: '+ data.text + '</p>';
-            return data.text
         } else {
             document.getElementById("verse-result").innerHTML = "<p>Attention: Que ton cœur ne se trouble point, ô chercheur ! Car l'absence de résultat n'est point une fin, mais un nouveau commencement sur le chemin de la découvert</p>";
         }
     } catch(error) {
         document.getElementById("verse-result").innertHTML = '<p>Erreur lors de la récupération du verset.</p>'
+    }
+}
+
+async function getRandomVerse() {
+    try {
+        const response = await fetch("https://bible-api.com/data/web/random");
+        const data = await response.json();
+
+        if (data.random_verse.text) {
+            document.getElementById("random-verse-result").innerHTML = '<p>Verset: '+ data.random_verse.text + '</p>';
+        } else {
+            document.getElementById("random-verse-result").innerHTML = "<p>Attention: Que ton cœur ne se trouble point, ô chercheur ! Car l'absence de résultat n'est point une fin, mais un nouveau commencement sur le chemin de la découverte</p>";
+        }
+    } catch(error) {
+        document.getElementById("random-verse-result").innertHTML = '<p>Erreur lors de la récupération du verset.</p>'
     }
 }
 
