@@ -90,6 +90,20 @@
     <input type="number" id="chapitre" name="chapitre" min="1" max="1000" />
     <label for="verset">Verset:</label>
     <input type="number" id="verset" name="verset" min="1" max="25000" />
+    <label for="livres-select">Traduction:</label>
+    <select name="translation" id="translation">
+        <option value="asv">American Standard Version (1901)</option>
+        <option value="bbe">Bible in Basic English</option>
+        <option value="darby">Darby Bible</option>
+        <option value="dra">Douay-Rheims 1899 American Edition</option>
+        <option value="kjv">King James Version</option>
+        <option value="web" selected>World English Bible (default)</option>
+        <option value="ylt">Young's Literal Translation (NT only)</option>
+        <option value="oeb-cw">Open English Bible, Commonwealth Edition</option>
+        <option value="webbe">World English Bible, British Edition</option>
+        <option value="oeb-us">Open English Bible, US Edition</option>
+        <option value="almeida">João Ferreira de Almeida</option>
+    </select>
     <button onclick="getVerse()">Rechercher</button>
     <div id="verse-result"></div>
 
