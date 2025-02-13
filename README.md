@@ -4,6 +4,8 @@ Dont les fonctionalitées principales sont de récupérer et rendre accessible l
 La construction par defaut (la plus basique) nécessite la definition de trois arguments selon ce modèle : https://bible-api.com/BOOK+CHAPTER:VERSE
 Il faut définir le livre, le chapitre, et un verset (optionnel, sinon l'ensemble du chapitre est donnée)
 
+### ⚠️ ATTENTION ⚠️
+Nous n'avons pas réalisé de release à ce jour suite à la problématique lié à l'impossibilité de créer un tag lors la demande, comme vu avec vous en fin de cours malheureusement.
 
 # Fonctionnalité 1
 get-specific-verse
